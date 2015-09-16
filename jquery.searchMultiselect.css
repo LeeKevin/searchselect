@@ -1,0 +1,194 @@
+.searchMultiselect {
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: 0.2s;
+    outline: none;
+    margin-left: -8px;
+    padding: 7px;
+    height: auto !important;
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.searchMultiselect.active {
+    border: 1px solid #3B99DB;
+}
+
+.searchMultiselect > .select-container {
+    width: auto;
+}
+
+.searchMultiselect > .select-container:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    position: absolute;
+    right: .4em;
+    top: .55em;
+    border-left: 1px solid #B3B3B3;
+    color: #B3B3B3;
+    padding: 0 .6em;
+    cursor: pointer;
+}
+
+.searchMultiselect.active > .select-container > .select {
+    border-color: #B3B3B3;
+}
+
+.searchMultiselect > .select-container > .select {
+    margin: 0;
+    width: 100%;
+    cursor: default;
+    float: none;
+}
+
+.searchMultiselect > .select-container > .autocomplete, .searchMultiselect > .select-container > .select {
+    line-height: 2em;
+    height: 2em;
+    padding: 0 3em 0 1.5em;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.searchMultiselect > .select-container > .autocomplete {
+    position: absolute;
+    margin: 0 0 0 1px;
+    color: #B3B3B3;
+    cursor: default;
+    pointer-events: none;
+}
+
+.searchMultiselect > .select-container > .autocomplete span {
+    color: transparent;
+}
+
+.searchMultiselect:not(.active) > .select-container > .autocomplete {
+    display: none !important;
+}
+
+.searchMultiselect > .selected_items {
+    padding: .4em 0 .25em 0;
+    clear: both;
+    border-bottom: 1px dotted #B3B3B3;
+    margin-bottom: 0.5em;
+    transition: 0.5s;
+    line-height: 12px;
+    font-size: .8em;
+    text-transform: uppercase;
+    max-height: 1000px;
+}
+
+.searchMultiselect > .selected_items a:first-of-type {
+    margin-left: 6px;
+}
+
+
+.searchMultiselect > .selected_items a {
+    display: inline-block;
+    padding: 2px 1px 2px 3px;
+    margin: 2px 3px;
+    background: #3B99DB;
+    color: #fff;
+    text-transform: none;
+    border-radius: 3px;
+}
+
+.searchMultiselect > .selected_items a i:after {
+    content: '\f057';
+    font-family: FontAwesome;
+    padding: 0 4px 0 3px;
+    margin: 0 0 0 3px;
+    cursor: pointer;
+    font-style: normal;
+}
+
+.searchMultiselect > .selected_items.empty {
+    padding: 0;
+    border-bottom: none;
+    max-height: 0;
+}
+
+.searchMultiselect > .selected_items.empty * {
+    display: none;
+}
+
+.searchMultiselect > .options {
+    max-height: 250px;
+    overflow-x: visible;
+    overflow-y: auto;
+    clear: both;
+    margin: 0 -7px;
+    transition: 0.2s;
+    z-index: 99;
+}
+
+.searchMultiselect .options::-webkit-scrollbar {
+    width: 5px;
+}
+
+.searchMultiselect .options::-webkit-scrollbar-track {
+    border: 1px solid #B3B3B3;
+    border-radius: 12px;
+}
+
+.searchMultiselect .options::-webkit-scrollbar-thumb {
+    background-color: #B3B3B3;
+    border-radius: 12px;
+}
+
+.searchMultiselect:not(.active) > .selected_items {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+}
+
+.searchMultiselect:not(.active) > .options {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    padding: 0 !important;
+}
+
+.searchMultiselect > .options label {
+    line-height: 1.5em;
+    height: 1.5em;
+    padding: .2em 0;
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+    font-weight: normal;
+}
+
+.searchMultiselect > .options input[type=checkbox] {
+    display: none;
+}
+
+.searchMultiselect > .options label:before {
+    content: "\f10c";
+    font-family: FontAwesome;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding: 0 10px 0 7px;
+    color: #B3B3B3;
+}
+
+.searchMultiselect > .options label:hover {
+    background: #3B99DB;
+}
+
+.searchMultiselect > .options label:hover, .searchMultiselect > .options label:hover:before,
+.searchMultiselect > .options input[type=checkbox]:checked + label:hover:before {
+    color: #fff;
+}
+
+.searchMultiselect > .options input[type=checkbox]:checked + label:before {
+    content: "\f058";
+    font-family: FontAwesome;
+    color: #3B99DB;
+}
