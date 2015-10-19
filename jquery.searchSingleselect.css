@@ -1,0 +1,140 @@
+.searchSingleselect {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .searchSingleselect * {
+    box-sizing: border-box;
+    color: #333; }
+  .searchSingleselect .searchsingle-main {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0.4em 0.75em;
+    cursor: pointer;
+    min-height: 2.2em;
+    opacity: inherit !important;
+    -webkit-transition: inherit !important;
+            transition: inherit !important; }
+    .searchSingleselect .searchsingle-main span {
+      color: inherit;
+      white-space: inherit;
+      text-decoration: inherit;
+      overflow: inherit;
+      text-overflow: inherit;
+      display: block;
+      margin-right: 2.75em; }
+    .searchSingleselect .searchsingle-main.searchsingle-placeholder {
+      color: #999; }
+    .searchSingleselect .searchsingle-main:not(.searchsingle-placeholder) .searchsingle-close-button {
+      display: inline-block; }
+    .searchSingleselect .searchsingle-main:after {
+      content: '\f0d7';
+      font-family: FontAwesome;
+      position: absolute;
+      right: .75em;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .searchSingleselect .searchsingle-main.searchsingle-opened {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0; }
+      .searchSingleselect .searchsingle-main.searchsingle-opened:after {
+        content: '\f0d8'; }
+      .searchSingleselect .searchsingle-main.searchsingle-opened + .searchsingle-drop {
+        left: inherit; }
+    .searchSingleselect .searchsingle-main:not(.searchsingle-opened).active {
+      box-shadow: 0 0 3px 1px rgba(69, 153, 181, 0.75); }
+  .searchSingleselect .searchsingle-close-button {
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding: .2em;
+    z-index: 1010;
+    font-weight: normal;
+    right: 2em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: #aaa; }
+    .searchSingleselect .searchsingle-close-button:after {
+      content: '\f00d';
+      font-family: FontAwesome; }
+    .searchSingleselect .searchsingle-close-button:hover {
+      color: #777; }
+  .searchSingleselect .searchsingle-drop {
+    position: absolute;
+    display: block;
+    left: -99999999px;
+    margin: -1px 0 0 0;
+    background: #fff;
+    z-index: 1000;
+    width: 100%;
+    border: 1px solid #aaa;
+    border-top: none;
+    border-radius: 0 0 3px 3px; }
+  .searchSingleselect .searchsingle-search {
+    position: relative;
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 3px 4px;
+    white-space: nowrap; }
+    .searchSingleselect .searchsingle-search input {
+      float: none;
+      margin: 1px 0;
+      padding: 4px 20px 4px 5px;
+      width: 100%;
+      height: auto;
+      outline: 0;
+      border-radius: 0;
+      line-height: normal;
+      border: 1px solid #aaa; }
+    .searchSingleselect .searchsingle-search:after {
+      content: '\f002';
+      font-family: FontAwesome;
+      position: absolute;
+      right: 1em;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      color: #aaa; }
+  .searchSingleselect .searchsingle-list {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 4px 4px 0;
+    padding: 0 0 0 4px;
+    clear: both;
+    float: none; }
+    .searchSingleselect .searchsingle-list li {
+      display: list-item;
+      cursor: pointer;
+      margin: 0;
+      padding: 0.4em 0.5em;
+      list-style: none;
+      word-wrap: break-word;
+      position: relative; }
+      .searchSingleselect .searchsingle-list li.highlighted {
+        background: #458499;
+        color: #e0e0e0; }
+        .searchSingleselect .searchsingle-list li.highlighted * {
+          color: inherit; }
+      .searchSingleselect .searchsingle-list li.noresults {
+        color: #aaa;
+        cursor: default; }
+
+/*# sourceMappingURL=maps/jquery.searchSingleselect.css.map */

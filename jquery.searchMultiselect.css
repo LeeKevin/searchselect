@@ -126,7 +126,6 @@
     clear: both;
     margin: 0 -7px;
     transition: 0.2s;
-    z-index: 99;
 }
 
 .searchMultiselect .options::-webkit-scrollbar {
